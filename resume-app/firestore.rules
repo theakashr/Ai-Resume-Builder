@@ -1,0 +1,22 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // User Profiles & Subcollections (resumes, atsReports, interviews, questions, answers, evaluations)
+    match /users/{userId} {
+      // Authenticated user can read & write only their own profile document
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+
+      // Authenticated user can access only their own subcollections
+      match /{allSubcollections=**} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+    }
+
+    // Default deny all other paths
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
