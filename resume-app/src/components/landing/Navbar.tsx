@@ -25,23 +25,23 @@ export const Navbar: React.FC = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${
         isScrolled
-          ? "bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-xs py-3"
-          : "bg-white/80 backdrop-blur-xs border-b border-slate-100 py-4"
+          ? "bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-xs py-2.5"
+          : "bg-white/80 backdrop-blur-xs border-b border-slate-100 py-3.5"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-12 sm:h-14">
         {/* Left: Logo */}
         <Link href="/" className="flex items-center gap-2.5 select-none group">
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-500 text-white flex items-center justify-center shadow-sm shadow-indigo-500/20 group-hover:scale-105 transition-transform duration-200">
+          <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-gradient-to-tr from-[#4F46E5] to-[#7C3AED] text-white flex items-center justify-center shadow-sm shadow-indigo-500/20 group-hover:scale-105 transition-transform duration-200">
             <Sparkles className="w-4 h-4" />
           </div>
-          <span className="font-extrabold text-xl tracking-tight text-slate-900">
-            Resume<span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600">AI</span>
+          <span className="font-extrabold text-xl tracking-tight text-[#0F172A]">
+            Resume<span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4F46E5] to-[#7C3AED]">AI</span>
           </span>
         </Link>
 
-        {/* Center: Links */}
-        <nav className="hidden md:flex items-center gap-1.5 lg:gap-2 bg-slate-50/80 p-1.5 rounded-full border border-slate-200/60 shadow-2xs">
+        {/* Center: Navigation */}
+        <nav className="hidden md:flex items-center gap-1 lg:gap-1.5 bg-slate-50/90 p-1.5 rounded-full border border-slate-200/70 shadow-2xs">
           <Link
             href="/"
             className="text-xs font-semibold px-3 py-1.5 rounded-full text-slate-900 bg-white shadow-xs"
@@ -80,9 +80,9 @@ export const Navbar: React.FC = () => {
           </a>
           <Link
             href="/design-system"
-            className="text-[11px] font-semibold px-2.5 py-1 bg-indigo-50 text-indigo-600 rounded-full hover:bg-indigo-100 transition-colors"
+            className="text-[11px] font-semibold px-2.5 py-1 bg-indigo-50 text-[#4F46E5] rounded-full hover:bg-indigo-100 transition-colors"
           >
-            Design System
+            Design System UI
           </Link>
         </nav>
 
@@ -92,7 +92,7 @@ export const Navbar: React.FC = () => {
             <Button
               variant="ghost"
               size="sm"
-              className="text-slate-700 hover:text-slate-900 font-semibold px-4"
+              className="text-slate-700 hover:text-slate-900 font-semibold px-4 text-xs"
             >
               Log In
             </Button>
@@ -102,7 +102,7 @@ export const Navbar: React.FC = () => {
               variant="primary"
               size="sm"
               rightIcon={<ArrowRight className="w-3.5 h-3.5" />}
-              className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-full px-4 shadow-sm shadow-indigo-600/20"
+              className="bg-gradient-to-r from-[#4F46E5] to-[#6366F1] hover:from-[#4338CA] hover:to-[#4F46E5] text-white font-semibold rounded-full px-4 shadow-sm shadow-indigo-600/20 text-xs"
             >
               Get Started Free
             </Button>
@@ -169,9 +169,9 @@ export const Navbar: React.FC = () => {
           <Link
             href="/design-system"
             onClick={() => setMobileMenuOpen(false)}
-            className="text-xs font-semibold py-1.5 text-indigo-600"
+            className="text-xs font-semibold py-1.5 text-[#4F46E5]"
           >
-            Design System UI Catalog
+            Design System UI
           </Link>
           <div className="flex flex-col gap-2.5 pt-2">
             <Link href="/login" onClick={() => setMobileMenuOpen(false)}>
@@ -180,7 +180,7 @@ export const Navbar: React.FC = () => {
               </Button>
             </Link>
             <Link href="/signup" onClick={() => setMobileMenuOpen(false)}>
-              <Button variant="primary" size="md" className="w-full bg-indigo-600 hover:bg-indigo-700 text-white">
+              <Button variant="primary" size="md" className="w-full bg-gradient-to-r from-[#4F46E5] to-[#6366F1] text-white">
                 Get Started Free →
               </Button>
             </Link>
