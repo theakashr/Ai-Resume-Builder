@@ -2,17 +2,16 @@
 
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, Sparkles, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
 interface TemplateCard {
   id: string;
   name: string;
-  category: string;
-  colorHex: string;
-  atsScore: number;
+  author: string;
   description: string;
   accentClass: string;
+  isDark?: boolean;
 }
 
 export const TemplatesSection: React.FC = () => {
@@ -20,165 +19,217 @@ export const TemplatesSection: React.FC = () => {
     {
       id: "modern-professional",
       name: "Modern Professional",
-      category: "Tech & Corporate",
-      colorHex: "#4F46E5",
-      atsScore: 98,
-      description: "Clean two-column header with ATS-scannable bullet points and skills tags.",
-      accentClass: "from-indigo-500 to-indigo-600",
+      author: "Alex Morgan",
+      description: "Clean single-column layout with bold titles and structured bullet points.",
+      accentClass: "from-blue-500 to-indigo-600",
     },
     {
       id: "minimal-clean",
       name: "Minimal Clean",
-      category: "Software Engineering",
-      colorHex: "#059669",
-      atsScore: 96,
-      description: "Monospaced hierarchy, generous whitespace, and zero parser blockers.",
-      accentClass: "from-emerald-500 to-emerald-600",
+      author: "Alex Morgan",
+      description: "Monospaced hierarchy, generous whitespace, and 100% parser compatibility.",
+      accentClass: "from-slate-400 to-slate-600",
     },
     {
       id: "dark-professional",
       name: "Dark Professional",
-      category: "Senior Leadership",
-      colorHex: "#0F172A",
-      atsScore: 95,
-      description: "High-contrast slate accents for management and executive applications.",
-      accentClass: "from-slate-800 to-slate-950",
+      author: "Alex Morgan",
+      description: "High-contrast dark card aesthetic for creative, tech, and executive roles.",
+      accentClass: "from-slate-900 to-slate-950",
+      isDark: true,
     },
     {
       id: "creative-modern",
       name: "Creative Modern",
-      category: "Design & Product",
-      colorHex: "#7C3AED",
-      atsScore: 94,
-      description: "Vibrant accent highlights with portfolio callouts and core competencies.",
-      accentClass: "from-purple-500 to-violet-600",
+      author: "Alex Morgan",
+      description: "Compact sidebar accent with skills tags and project portfolio links.",
+      accentClass: "from-purple-500 to-indigo-600",
     },
     {
       id: "elegant-classic",
       name: "Elegant Classic",
-      category: "Finance & Consulting",
-      colorHex: "#2563EB",
-      atsScore: 97,
-      description: "Timeless single-column typography designed for traditional recruiters.",
-      accentClass: "from-blue-600 to-indigo-700",
+      author: "ALEX MORGAN",
+      description: "Traditional corporate typography with centered headers and clean dividers.",
+      accentClass: "from-slate-700 to-slate-900",
     },
     {
       id: "modern-gradient",
       name: "Modern Gradient",
-      category: "Marketing & Growth",
-      colorHex: "#D97706",
-      atsScore: 93,
-      description: "Subtle gradient section badges optimized for creative and tech roles.",
-      accentClass: "from-amber-500 to-orange-600",
+      author: "Alex Morgan",
+      description: "Vibrant accent column with emerald tags designed for modern tech candidates.",
+      accentClass: "from-emerald-500 to-teal-600",
     },
   ];
 
   return (
-    <section id="templates" className="py-20 sm:py-24 bg-slate-50/50 border-b border-slate-200/80">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-          <div className="space-y-3 text-left max-w-2xl">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-100 text-xs font-bold uppercase tracking-wider text-indigo-700">
-              <Sparkles className="w-3.5 h-3.5" /> Popular Templates
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
-              Professional Templates for Every Career
-            </h2>
-            <p className="text-sm sm:text-base text-slate-600">
-              Choose from 50+ ATS-optimized templates designed by hiring experts and verified against top applicant tracking systems.
-            </p>
-          </div>
+    <section id="templates" className="py-20 sm:py-24 bg-[#FAF9FD] border-t border-slate-200/70">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Eyebrow badge */}
+        <div className="text-center mb-3">
+          <span className="text-[11px] font-bold uppercase tracking-wider text-[#4338CA] bg-indigo-50 px-3 py-1 rounded-full border border-indigo-100 inline-block">
+            POPULAR TEMPLATES
+          </span>
+        </div>
 
-          <Link href="/dashboard/templates" className="shrink-0">
-            <Button
-              variant="outline"
-              size="md"
-              rightIcon={<ArrowRight className="w-4 h-4" />}
-              className="rounded-full border-slate-300 font-semibold text-slate-800 hover:bg-white shadow-2xs"
-            >
-              View All Templates
-            </Button>
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto space-y-2 mb-12">
+          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-black tracking-tight text-[#0F172A]">
+            Professional Templates for Every Career
+          </h2>
+          <p className="text-sm sm:text-base text-slate-500">
+            Choose from 50+ ATS-optimized templates designed by experts.
+          </p>
+        </div>
+
+        {/* View All Templates link on top right */}
+        <div className="flex justify-end mb-6">
+          <Link
+            href="/dashboard/templates"
+            className="text-xs font-bold text-[#4338CA] hover:text-[#3730A3] inline-flex items-center gap-1 group"
+          >
+            View All Templates
+            <ArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-0.5 transition-transform" />
           </Link>
         </div>
 
         {/* 6 Template Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-5">
           {templates.map((template) => (
-            <div
+            <Link
               key={template.id}
-              className="group bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-indigo-200 transition-all duration-300 overflow-hidden flex flex-col text-left"
+              href={`/dashboard/resumes/builder?template=${template.id}`}
+              className="group bg-white rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-xl hover:border-indigo-300 transition-all duration-300 overflow-hidden flex flex-col text-left p-3"
             >
-              {/* Template Preview Top Visual */}
-              <div className="h-44 sm:h-48 bg-gradient-to-br from-slate-100 to-slate-50 p-4 border-b border-slate-100 relative overflow-hidden flex items-center justify-center">
-                {/* Paper mini mockup */}
-                <div className="w-48 h-56 bg-white rounded-t-lg shadow-md border border-slate-200/80 p-3 flex flex-col gap-1.5 transform group-hover:-translate-y-2 transition-transform duration-300">
-                  <div className={`h-2 w-16 rounded bg-gradient-to-r ${template.accentClass}`} />
-                  <div className="h-1.5 w-28 bg-slate-200 rounded" />
-                  <div className="h-px w-full bg-slate-100 my-1" />
-                  <div className="space-y-1">
-                    <div className="h-1.5 w-full bg-slate-100 rounded" />
-                    <div className="h-1.5 w-5/6 bg-slate-100 rounded" />
-                    <div className="h-1.5 w-4/6 bg-slate-100 rounded" />
-                  </div>
-                  <div className="h-px w-full bg-slate-100 my-1" />
-                  <div className="flex gap-1">
-                    <div className="h-2 w-8 bg-slate-100 rounded" />
-                    <div className="h-2 w-8 bg-slate-100 rounded" />
-                    <div className="h-2 w-8 bg-slate-100 rounded" />
-                  </div>
-                </div>
-
-                {/* ATS Badge */}
-                <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-xs px-2.5 py-1 rounded-full border border-emerald-200 shadow-2xs flex items-center gap-1 text-[11px] font-bold text-emerald-700">
-                  <CheckCircle2 className="w-3 h-3 text-emerald-500" />
-                  {template.atsScore}% ATS
-                </div>
-              </div>
-
-              {/* Template Details Bottom */}
-              <div className="p-5 flex flex-col flex-1 justify-between gap-4">
+              {/* Template Miniature Paper Mockup */}
+              <div
+                className={`h-56 rounded-xl border p-3.5 flex flex-col justify-between transition-transform duration-300 group-hover:scale-102 ${
+                  template.isDark
+                    ? "bg-[#111827] border-slate-800 text-white"
+                    : "bg-white border-slate-200/80 text-slate-900 shadow-2xs"
+                }`}
+              >
+                {/* Header in paper */}
                 <div>
-                  <div className="flex items-center justify-between mb-1">
-                    <h3 className="font-bold text-base text-slate-900 group-hover:text-indigo-600 transition-colors">
-                      {template.name}
-                    </h3>
+                  <div className="flex items-center gap-2 mb-2">
+                    <div
+                      className={`w-7 h-7 rounded-full flex items-center justify-center text-[10px] font-bold ${
+                        template.isDark ? "bg-slate-700 text-slate-200" : "bg-slate-100 text-slate-700"
+                      }`}
+                    >
+                      AM
+                    </div>
+                    <div>
+                      <div className="text-[11px] font-bold leading-none">{template.author}</div>
+                      <div
+                        className={`text-[8.5px] ${
+                          template.isDark ? "text-slate-400" : "text-slate-500"
+                        } mt-0.5`}
+                      >
+                        Software Engineer
+                      </div>
+                    </div>
                   </div>
-                  <span className="text-xs font-semibold text-indigo-600 block mb-2">
-                    {template.category}
-                  </span>
-                  <p className="text-xs text-slate-600 leading-relaxed">
-                    {template.description}
-                  </p>
+
+                  <div
+                    className={`h-px w-full my-1.5 ${
+                      template.isDark ? "bg-slate-800" : "bg-slate-100"
+                    }`}
+                  />
+
+                  {/* Section lines */}
+                  <div className="space-y-1">
+                    <div
+                      className={`h-1.5 w-12 rounded ${
+                        template.isDark ? "bg-indigo-400/50" : "bg-indigo-500"
+                      }`}
+                    />
+                    <div
+                      className={`h-1 w-full rounded ${
+                        template.isDark ? "bg-slate-800" : "bg-slate-100"
+                      }`}
+                    />
+                    <div
+                      className={`h-1 w-5/6 rounded ${
+                        template.isDark ? "bg-slate-800" : "bg-slate-100"
+                      }`}
+                    />
+                  </div>
+
+                  <div className="space-y-1 mt-2.5">
+                    <div
+                      className={`h-1.5 w-14 rounded ${
+                        template.isDark ? "bg-indigo-400/50" : "bg-indigo-500"
+                      }`}
+                    />
+                    <div
+                      className={`h-1 w-full rounded ${
+                        template.isDark ? "bg-slate-800" : "bg-slate-100"
+                      }`}
+                    />
+                    <div
+                      className={`h-1 w-4/6 rounded ${
+                        template.isDark ? "bg-slate-800" : "bg-slate-100"
+                      }`}
+                    />
+                  </div>
                 </div>
 
-                <div className="pt-2 border-t border-slate-100 flex items-center justify-between">
-                  <Link
-                    href={`/dashboard/resumes/builder?template=${template.id}`}
-                    className="text-xs font-bold text-indigo-600 hover:text-indigo-700 flex items-center gap-1 group/btn"
-                  >
-                    Use This Template
-                    <ArrowRight className="w-3.5 h-3.5 transform group-hover/btn:translate-x-0.5 transition-transform" />
-                  </Link>
-                  <span className="text-[11px] font-medium text-slate-400">ATS Certified</span>
+                {/* Bottom skill pills in paper */}
+                <div className="flex gap-1 pt-2">
+                  <div
+                    className={`h-2 w-7 rounded ${
+                      template.isDark ? "bg-slate-800" : "bg-slate-100"
+                    }`}
+                  />
+                  <div
+                    className={`h-2 w-7 rounded ${
+                      template.isDark ? "bg-slate-800" : "bg-slate-100"
+                    }`}
+                  />
+                  <div
+                    className={`h-2 w-7 rounded ${
+                      template.isDark ? "bg-slate-800" : "bg-slate-100"
+                    }`}
+                  />
                 </div>
               </div>
-            </div>
+
+              {/* Title & Category below paper */}
+              <div className="pt-3 pb-1 px-1">
+                <h3 className="font-bold text-xs text-slate-900 group-hover:text-[#4338CA] transition-colors truncate">
+                  {template.name}
+                </h3>
+              </div>
+            </Link>
           ))}
         </div>
 
-        {/* Explore All Templates Bottom CTA */}
-        <div className="mt-12 text-center">
+        {/* Explore All Templates Bottom Button + Decorative Callout */}
+        <div className="mt-12 flex flex-col items-center relative">
           <Link href="/dashboard/templates">
-            <Button
-              variant="primary"
-              size="lg"
-              rightIcon={<ArrowRight className="w-4 h-4" />}
-              className="rounded-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-8 shadow-sm hover:shadow-md"
-            >
+            <button className="bg-[#4338CA] hover:bg-[#3730A3] text-white font-semibold text-sm px-8 py-3.5 rounded-full shadow-md shadow-indigo-600/20 hover:shadow-lg transition-all inline-flex items-center gap-2">
               Explore All Templates
-            </Button>
+              <ArrowRight className="w-4 h-4" />
+            </button>
           </Link>
+
+          {/* Handwritten Style Annotation: Find the perfect one for you! */}
+          <div className="hidden sm:block absolute right-1/4 -bottom-8 pointer-events-none">
+            <span className="font-serif italic text-sm text-slate-400 -rotate-3 block">
+              Find the perfect<br />one for you!
+            </span>
+            <svg
+              className="w-10 h-6 text-slate-300 ml-auto -mt-1"
+              viewBox="0 0 40 25"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+            >
+              <path d="M5 5 C 15 20, 25 22, 35 15" />
+              <path d="M30 14 L 35 15 L 34 20" />
+            </svg>
+          </div>
         </div>
       </div>
     </section>
