@@ -26,7 +26,6 @@
 - [Tech Stack](#-tech-stack)
 - [Architecture](#-architecture)
 - [Getting Started](#-getting-started)
-- [Environment Variables](#-environment-variables)
 - [Database Schema](#-database-schema)
 - [API Reference](#-api-reference)
 - [Security](#-security)
@@ -194,9 +193,8 @@ cd Ai-Resume-Builder/resume-app
 # 2. Install dependencies
 npm install
 
-# 3. Set up environment variables
+# 3. Set up environment variables (optional for local dev)
 cp .env.example .env.local
-# Edit .env.local with your credentials (see Environment Variables section)
 
 # 4. Run Supabase migrations (if using Supabase CLI)
 npx supabase db push
@@ -216,48 +214,6 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 | `npm run start` | Start production server |
 | `npm run lint` | Run ESLint checks |
 | `npx tsx tests/run_master_suite.ts` | Run all 76 API tests |
-
----
-
-## 🔐 Environment Variables
-
-Create a `.env.local` file in the `resume-app/` directory:
-
-```env
-# ─── Supabase ───────────────────────────────────────────
-NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
-NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbG...
-SUPABASE_SERVICE_ROLE_KEY=eyJhbG...          # Server-side only
-DATABASE_URL=postgresql://...                 # For migrations
-
-# ─── Firebase ──────────────────────────────────────────
-NEXT_PUBLIC_FIREBASE_API_KEY=AIzaSy...
-NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your-project.firebaseapp.com
-NEXT_PUBLIC_FIREBASE_PROJECT_ID=your-project
-NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your-project.appspot.com
-NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=123456789
-NEXT_PUBLIC_FIREBASE_APP_ID=1:123456789:web:abc123
-NEXT_PUBLIC_RECAPTCHA_SITE_KEY=6Lc...        # Optional, for App Check
-
-# ─── AI Provider ──────────────────────────────────────
-GEMINI_API_KEY=AIzaSy...                     # Google Gemini 1.5 Flash
-AI_PROVIDER=                                  # Set to "mock" for offline dev
-
-# ─── Stripe Billing ───────────────────────────────────
-STRIPE_SECRET_KEY=sk_test_...
-STRIPE_WEBHOOK_SECRET=whsec_...
-
-# ─── Email ─────────────────────────────────────────────
-RESEND_API_KEY=re_...                         # Or use SMTP below
-SMTP_HOST=smtp.example.com
-SMTP_USER=user@example.com
-SMTP_PASS=password
-
-# ─── App ───────────────────────────────────────────────
-NEXT_PUBLIC_APP_URL=http://localhost:3000
-```
-
-> **Note:** The app includes mock/fallback providers for development. You can run `npm run dev` without real credentials — Firebase Auth, Supabase, and AI features will use built-in mock responses.
 
 ---
 
