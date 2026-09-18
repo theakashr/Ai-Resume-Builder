@@ -1,4 +1,4 @@
-<![CDATA[# 🚀 AI Resume Builder
+# 🚀 AI Resume Builder
 
 An AI-powered resume builder and career assistant platform — build ATS-optimized resumes, ace mock interviews, and land your dream job.
 
@@ -25,4 +25,4 @@ Open [http://localhost:3000](http://localhost:3000)
 ## Documentation
 
 See the full documentation in [`resume-app/README.md`](resume-app/README.md).
-]]>
+
