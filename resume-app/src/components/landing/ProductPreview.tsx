@@ -102,7 +102,7 @@ export const ProductPreview: React.FC = () => {
           </div>
         </div>
 
-        {/* 2-Column Split: Left = Akash R. Resume Document | Right = ATS Scorecards & AI Optimizer */}
+        {/* 2-Column Split: Left = Alex Morgan Resume Document | Right = ATS Scorecards & AI Optimizer */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
           {/* LEFT INNER COLUMN: Resume Card (lg:col-span-7) */}
           <div className="lg:col-span-7 bg-white rounded-2xl border border-slate-200/90 p-4 sm:p-5 shadow-sm text-left flex flex-col justify-between">
@@ -110,14 +110,14 @@ export const ProductPreview: React.FC = () => {
               {/* Header: Photo Avatar + Name + Title */}
               <div className="flex items-center gap-3 pb-3 border-b border-slate-100">
                 <div className="w-12 h-12 rounded-full overflow-hidden bg-gradient-to-tr from-slate-200 to-indigo-100 shrink-0 border border-slate-200 flex items-center justify-center text-slate-700 font-bold text-sm">
-                  AR
+                  AM
                 </div>
                 <div>
                   <h3 className="text-lg font-black tracking-tight text-slate-900">
-                    Akash R.
+                    Alex Morgan
                   </h3>
                   <p className="text-[11px] font-semibold text-slate-500">
-                    Computer Science Engineer
+                    Software Engineer
                   </p>
                 </div>
               </div>
@@ -126,27 +126,27 @@ export const ProductPreview: React.FC = () => {
               <div className="grid grid-cols-2 gap-x-2 gap-y-1 py-2 text-[10px] text-slate-500 border-b border-slate-100">
                 <span className="flex items-center gap-1 truncate">
                   <Mail className="w-2.5 h-2.5 text-slate-400 shrink-0" />
-                  akashr@email.com
+                  alex.morgan@example.com
                 </span>
                 <span className="flex items-center gap-1 truncate">
                   <Phone className="w-2.5 h-2.5 text-slate-400 shrink-0" />
-                  +91 98765 43210
+                  +1 (415) 555-0128
                 </span>
                 <span className="flex items-center gap-1 truncate">
                   <MapPin className="w-2.5 h-2.5 text-slate-400 shrink-0" />
-                  Davanagere, KA
+                  San Francisco, CA
                 </span>
                 <span className="flex items-center gap-1 truncate">
                   <svg className="w-2.5 h-2.5 text-slate-400 shrink-0 fill-current" viewBox="0 0 24 24">
                     <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.88a1.62 1.62 0 0 0-1.63 1.62c0 .89.73 1.62 1.63 1.62.89 0 1.62-.73 1.62-1.62 0-.89-.73-1.62-1.62-1.62Z" />
                   </svg>
-                  linkedin.com/in/akashr
+                  linkedin.com/in/alexmorgan
                 </span>
                 <span className="flex items-center gap-1 truncate col-span-2">
                   <svg className="w-2.5 h-2.5 text-slate-400 shrink-0 fill-current" viewBox="0 0 24 24">
                     <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z" />
                   </svg>
-                  github.com/theakashr
+                  github.com/alexmorgan
                 </span>
               </div>
 
@@ -156,8 +156,24 @@ export const ProductPreview: React.FC = () => {
                   Professional Summary
                 </h4>
                 <p className="text-[10.5px] text-slate-600 leading-relaxed">
-                  Motivated Computer Science Engineering student with strong problem-solving skills and a passion for building real-world solutions using modern technologies.
+                  Results-driven Software Engineer with 5+ years of experience building scalable web applications and cloud-based systems. Passionate about creating reliable products and solving complex technical problems.
                 </p>
+              </div>
+
+              {/* Section: Experience */}
+              <div className="py-2 border-b border-slate-100 text-[10.5px]">
+                <h4 className="text-[10px] font-extrabold uppercase tracking-wider text-slate-900 mb-1">
+                  Experience
+                </h4>
+                <div className="flex justify-between items-baseline font-bold text-slate-900">
+                  <span>Senior Software Engineer</span>
+                  <span className="text-[10px] text-slate-500 font-normal">2022 – Present</span>
+                </div>
+                <div className="text-[10px] font-semibold text-slate-700 mb-1">Nova Technologies</div>
+                <ul className="list-disc list-inside text-[10px] text-slate-600 space-y-0.5">
+                  <li>Built scalable web applications serving millions of users.</li>
+                  <li>Improved application performance by 38%.</li>
+                </ul>
               </div>
 
               {/* Section: Education */}
@@ -166,12 +182,12 @@ export const ProductPreview: React.FC = () => {
                   Education
                 </h4>
                 <div className="flex justify-between items-baseline font-bold text-slate-900">
-                  <span>B.E. in Computer Science Engineering</span>
-                  <span className="text-[10px] text-slate-500 font-normal">2024 – 2028</span>
+                  <span>B.S. Computer Science</span>
+                  <span className="text-[10px] text-slate-500 font-normal">2020 – 2024</span>
                 </div>
                 <div className="flex justify-between items-baseline text-slate-500">
-                  <span>BIET Davanagere</span>
-                  <span className="font-semibold text-slate-800">CGPA: 9.0</span>
+                  <span>Stanford University</span>
+                  <span className="font-semibold text-slate-800">GPA: 3.8</span>
                 </div>
               </div>
 
@@ -181,7 +197,7 @@ export const ProductPreview: React.FC = () => {
                   Skills
                 </h4>
                 <div className="flex flex-wrap gap-1 text-[9.5px]">
-                  {["C", "Python", "JavaScript", "React", "Next.js", "TypeScript", "DSA", "Problem Solving", "Git", "SQL"].map(
+                  {["Python", "JavaScript", "TypeScript", "React", "Next.js", "Node.js", "SQL", "AWS", "Docker", "Git"].map(
                     (skill) => (
                       <span
                         key={skill}
@@ -199,9 +215,9 @@ export const ProductPreview: React.FC = () => {
                 <h4 className="text-[10px] font-extrabold uppercase tracking-wider text-slate-900 mb-0.5">
                   Projects
                 </h4>
-                <p className="font-bold text-slate-900">Smart Attendance System</p>
+                <p className="font-bold text-slate-900">AI Career Assistant</p>
                 <p className="text-slate-600 text-[10px]">
-                  Face recognition based attendance system using Python and OpenCV.
+                  Built an AI-powered career platform that analyzes resumes, recommends improvements, and matches candidates with relevant job opportunities.
                 </p>
               </div>
 
@@ -210,7 +226,7 @@ export const ProductPreview: React.FC = () => {
                 <h4 className="text-[10px] font-extrabold uppercase tracking-wider text-slate-900 mb-0.5">
                   Certifications
                 </h4>
-                <p className="text-slate-700 font-medium">HackerRank Problem Solving (Basic)</p>
+                <p className="text-slate-700 font-medium">AWS Certified Developer</p>
               </div>
             </div>
           </div>
@@ -364,13 +380,13 @@ export const ProductPreview: React.FC = () => {
         {/* Overlapping User Avatars */}
         <div className="flex -space-x-1.5">
           <div className="w-6 h-6 rounded-full bg-slate-300 border-2 border-white overflow-hidden text-[9px] font-bold flex items-center justify-center text-slate-700">
-            A
+            J
           </div>
           <div className="w-6 h-6 rounded-full bg-indigo-300 border-2 border-white overflow-hidden text-[9px] font-bold flex items-center justify-center text-indigo-900">
-            K
+            S
           </div>
           <div className="w-6 h-6 rounded-full bg-purple-300 border-2 border-white overflow-hidden text-[9px] font-bold flex items-center justify-center text-purple-900">
-            R
+            M
           </div>
         </div>
         <div className="text-left leading-tight">
